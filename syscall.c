@@ -7,7 +7,7 @@ int main(){
 	char buffer[80];
 	char msg[50]= "hello software engineer";
 	fd = open ("check.txt",O_RDWR | O_CREAT);
-	printf = ("fd = %d",fd);
+	printf("fd = %d",fd);
 
 	if(fd != -1){
 	printf("\n check.txt opened with read write access\n");
