@@ -33,4 +33,19 @@ debe notificar al kernel con la llamada de sistema close.
 
 int close(int fd);
 
+Las llamadas read y write copian n bytes entre memoria y
+el archivo (o viceversa) retornando el número de bytes
+copiados.
+
+include <unistd.h>
+
+Retorna: número de bytes leidos, 0 si EOF, -1 si hubo error 
+ssize_t read(int fd, void *buf, size_t n);
+ Retorna: número de bytes escritos, -1 si hubo error 
+ssize_t write(int fd, const void *buf, size_t n);
+
+lseek reposiciona el puntero de posición de archivo.
+off_t lseek(int fd, off_t offset, int whence);
+
+
 
